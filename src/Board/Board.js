@@ -21,7 +21,7 @@ class Board extends Component {
              </div>
              </Link>
                   <li className="postDate">
-                      Posted on {post.date}
+                      {post.date}
                   </li>
                   <li className="postDescription">
                       {post.description}
