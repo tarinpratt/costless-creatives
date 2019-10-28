@@ -1,0 +1,15 @@
+h1 {
+    text-align: center;
+}
+.profilePic {
+    margin-right: auto;
+    margin-left: auto;
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+}
+
+p {
+    padding-left: 20px;
+}

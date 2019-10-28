@@ -1,0 +1,175 @@
+.postBoard {
+    width: 280px;
+    padding: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgb(143, 128, 130);
+    border-radius: 10px;
+    box-shadow: 20px 11px 21px -8px rgba(0, 0, 0.5, 0.5);
+}
+
+h1.projectBoard {
+    height: 50px;
+    color :white;
+    background-color: rgb(104, 75, 79);
+}
+.post {
+    display: block;
+}
+
+.media {
+    display: block;
+}
+
+textarea {
+    display: block;
+    width: 280px;
+    border-radius: 10px;
+}
+
+.postSubmit {
+    width: 100px;
+    border-radius: 5px;
+    background: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    background-color: lightgray;
+    color: rgb(42, 41, 54);
+}
+
+.postSubmit:hover {
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.postingsList {
+    font-weight: bold;
+    padding-left: 10px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.postings {
+    box-shadow: 20px 11px 21px -8px rgba(0, 0, 0.5, 0.5);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    margin-left: 30px;
+    background-color: rgb(198, 205, 212);
+}
+
+.postProfilePic {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.profileLink {
+    text-decoration: none;
+    color: rgb(42, 41, 54);
+}
+
+.postUsername {
+    border-radius: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: 9px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+a.profileLink:hover {
+    font-size: 35px;
+    color: rgb(102, 3, 19);
+    text-decoration: underline;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+
+.postDate {
+    text-align: center;
+    width: 160px;
+    font-weight: bold;
+    margin-top: 5px;
+    height: 40px;
+    padding: 5px;
+    color: rgb(104, 75, 79);
+    border-radius: 10px;
+    /* background-color: rgb(42, 41, 54); */
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+
+}
+.postDescription {
+    margin-left: 0px;
+
+}
+a.messageLink {
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(42, 41, 54);
+    border-radius: 10px;
+    height: 50px;
+    display: block;
+    text-align: center;
+}
+a.messageLink:hover {    
+    font-weight: bolder;
+    background-color: rgb(102, 3, 19);
+}
+
+.postImage {
+    max-width: 300px;
+    height: 200px;
+    background-repeat: no-repeat;
+    /* margin-right: auto;
+    margin-left: auto; */
+}
+
+.backToTop {
+    text-decoration: none;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    font-weight: bold;
+}
+
+.backToTop:hover {
+    cursor: pointer;
+    color:rgb(102, 3, 19);
+}
+
+.top:hover {
+    cursor: pointer;
+    color:rgb(102, 3, 19);
+}
+
+.top {
+    text-align: center;
+    background-color: rgb(143, 128, 130);
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+.arrow {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+}
+
+

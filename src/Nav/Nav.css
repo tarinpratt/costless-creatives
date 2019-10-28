@@ -1,0 +1,12 @@
+
+.nav {
+    text-decoration: none;
+    padding: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: rgb(42, 41, 54);
+}
+
+.nav:hover {
+    font-weight: bolder;
+}

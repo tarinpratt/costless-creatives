@@ -1,0 +1,72 @@
+.Header {
+    padding-top: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: rgb(42, 41, 54);
+    width: 100%;
+}
+
+
+button.acctButtons {
+    height: 40px;
+    margin-right: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: rgb(42, 41, 54);
+    padding: 0;
+    border: none;
+    background: none;
+    float: right;
+    text-decoration: none;
+}
+
+a.acctButtons {
+    margin-right: 20px;
+    color: rgb(42, 41, 54);
+    float: right;
+    text-decoration: none;
+}
+
+.acctButtons:hover {
+    cursor: pointer;
+    font-weight: bolder;
+    /* color: rgb(158, 111, 119); */
+}
+
+.logo {
+    border-radius: 40px;
+}
+
+.logo:hover {
+    border: 5px solid lightpink;
+}
+
+.logInForm {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 5px;
+    background-color: rgb(143, 128, 130);
+}
+
+input {
+    height: 20px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.logInSubmit {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: rgb(42, 41, 54);
+}
+
+.logInSubmit:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,32 @@
+.signUpForm {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 300px;
+    padding: 20px;
+}
+
+.signUpForm {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgb(143, 128, 130);
+}
+
+.signUpInput {
+    width: 200px;
+}
+
+.signUpSubmit {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: lightgray;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: rgb(42, 41, 54);
+}
+
+.signUpSubmit:hover {
+    cursor: pointer;
+}

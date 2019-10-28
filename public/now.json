@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "alias": "pratttarin-costless-creatives",
+    "name": "costless-creatives",
+    "routes": [
+        {
+          "src": "^/static/(.*)",
+          "dest": "/static/$1"
+        },
+        {
+          "src": ".*",
+          "dest": "/index.html"
+        }
+    ]
+  }
