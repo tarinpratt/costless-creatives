@@ -45,15 +45,15 @@ export default {
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmzTYnmCcfvmuun-LE_Tld1G4CgerYRVnrGmoo4vf1biwx3EqJeg&s",
         bio: 'MUA at Sephora. Trying to put together look books and gain exposure to eventually work on film.'
     },
-    // {
-    //     id: '6',
-    //     profile_pic: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQauKfiWjei3oKi4llY6MZJyGQOcSny3OI1F6Dxve4cFlGJg9Q9&s",
-    //     username: 'JenActs',
-    //     date: '',
-    //     description: '',
-    //     image: '',
-    //     bio: `My name is Jennifer and I'm an actress who just recently relocated to LA. I'm always looking for other actors to run lines with and help with self tapes. Really, I'm just hungry to get out into the world of acting and meet like minded people like me! Message me if you want to collab!`
-    // }
+    {
+        id: '6',
+        profile_pic: "https://i.imgur.com/ur2TfOE.jpg",
+        username: 'JenActs',
+        date: '',
+        description: '',
+        image: '',
+        bio: `My name is Jennifer and I'm an actress who just recently relocated to LA. I'm always looking for other actors to run lines with and help with self tapes. Really, I'm just hungry to get out into the world of acting and meet like minded people like me! Message me if you want to collab!`
+    }
     ]
 
 }

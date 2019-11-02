@@ -1,42 +1,80 @@
 import React, {Component} from 'react';
+import AuthApiService from '../Services/Auth-Api-Service'
+import { Button, Input } from '../Utils/Utils'
 import './SignUpForm.css'
 
 class SignUpForm extends Component {
-  render() {
+    static defaultProps = {
+        onRegistrationSuccess: () => {}
+      }
+         state = { 
+           loading: false,
+           error: null }
+
+          handleSubmit = ev => {
+            ev.preventDefault()
+            this.setState({ 
+              loading: true,
+              error: null })
+              const { username, email, password } = ev.target
+             AuthApiService.postUser({
+               username: username.value,
+               email: email.value,
+               password: password.value,
+             })
+               .then(user => {
+        
+            username.value = ''
+            email.value = ''
+            password.value = ''
+            this.props.onRegistrationSuccess()
+            this.setState({
+              loading: false
+            })
+               })
+              .catch(res => {
+                this.setState({ error: res.error})
+              })
+          }
+        
+    render() {
+          const { error } = this.state
   return (
-    <form className="signUpForm">
+    <form className="signUpForm" role='post' onSubmit={this.handleSubmit}>
         <h1>Sign Up</h1>
+        <div role='alert'>
+          {error && <p className='red'>{error}</p>}
+        </div>
     <label htmlFor="username">
         Username
-        <input
+        <Input
         className="signUpInput"
         name="username"
         type="text"
         required>
-        </input>
+        </Input>
     </label>
     <label htmlFor="email">
         Email
-        <input
+        <Input
         className="signUpInput"
         name="email"
         type="email"
         required>
-        </input>
+        </Input>
     </label>
     <label htmlFor="password">
         Password
-        <input
+        <Input
         className="signUpInput"
         name="password"
         type="password"
         required>
-        </input>
+        </Input>
     </label>
-    <button type="submit" className="signUpSubmit">
+    <Button type="submit" className="signUpSubmit">
         Sign Up
-    </button>
-
+    </Button>
 </form>
 
         )

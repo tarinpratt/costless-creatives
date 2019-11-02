@@ -16,7 +16,6 @@ class Messages extends Component {
     ))
   return (
       <section className="messages">
-          <Nav />
           {listMessages}
       </section>
     )

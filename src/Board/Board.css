@@ -87,7 +87,6 @@ textarea {
 
 a.profileLink:hover {
     font-size: 35px;
-    color: rgb(102, 3, 19);
     text-decoration: underline;
     border-radius: 20px;
     padding: 5px;
@@ -129,11 +128,14 @@ a.messageLink:hover {
 }
 
 .postImage {
-    max-width: 300px;
-    height: 200px;
-    background-repeat: no-repeat;
-    /* margin-right: auto;
-    margin-left: auto; */
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+
 }
 
 .backToTop {
@@ -170,6 +172,17 @@ a.messageLink:hover {
     padding-left: 10px;
     padding-right: 10px;
     color: white;
+}
+
+.collabPicBoard {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    margin-right: 20px;   
+}
+
+.cut {
+    color: rgb(129, 68, 68);
 }
 
 

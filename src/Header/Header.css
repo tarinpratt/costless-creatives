@@ -42,13 +42,16 @@ a.acctButtons {
 }
 
 .logInForm {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    float: right;
+    float: right; */
+    width: 210px;
+    margin-right: auto;
+    margin-left: auto;
     border: 1px solid black;
     border-radius: 5px;
     padding: 10px;
-    margin-right: 5px;
+    
     background-color: rgb(143, 128, 130);
 }
 
