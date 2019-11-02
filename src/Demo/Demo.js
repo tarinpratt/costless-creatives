@@ -50,7 +50,7 @@ class Demo extends Component {
                       <Input
                       name="username"
                       type="text"
-                      value="DanceLyfe"
+                      defaultValue="DanceLyfe"
                       placeholder="Demo"
                       required>
                       </Input>
@@ -60,7 +60,7 @@ class Demo extends Component {
                       <Input
                       name="password"
                       type="password"
-                      value="1234567Tp#"
+                      defaultValue="1234567Tp#"
                       placeholder="demo"
                       required>
                       </Input>
