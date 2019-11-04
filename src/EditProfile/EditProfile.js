@@ -14,7 +14,7 @@ class EditProfile extends Component {
     };
     this.uploadImage = this.uploadImage.bind(this)
 }
-componentDidMount() {
+  componentDidMount() {
     const profileId = this.props.match.params.profileId
     fetch(`${config.API_ENDPOINT}/profile/${profileId}`, {
       method: 'GET',
@@ -79,28 +79,27 @@ componentDidMount() {
         })
       }
 
-uploadImage() {
-  const r = new XMLHttpRequest()
-  const d = new FormData()
-  const e = document.getElementsByClassName('input-image')[0].files[0]
-  let u
-  d.append('image', e)
-  r.open('POST', 'https://api.imgur.com/3/image/')
-  r.setRequestHeader('Authorization', `Client-ID 1c71a0d4119b323`)
-  r.send(d)
-  this.setState({
-    loading: true
-  })
-  r.onreadystatechange = () => {
-    if(r.status === 200 && r.readyState === 4) {
-      let res = JSON.parse(r.responseText)
-      u = `https://i.imgur.com/${res.data.id}.png`  
-      this.setState({ profile_pic: u,
-      loading: false })     
-    }   
-  }       
-}
-
+  uploadImage() {
+    const r = new XMLHttpRequest()
+    const d = new FormData()
+    const e = document.getElementsByClassName('input-image')[0].files[0]
+    let u
+    d.append('image', e)
+    r.open('POST', 'https://api.imgur.com/3/image/')
+    r.setRequestHeader('Authorization', `Client-ID 1c71a0d4119b323`)
+    r.send(d)
+    this.setState({
+      loading: true
+    })
+    r.onreadystatechange = () => {
+      if(r.status === 200 && r.readyState === 4) {
+        let res = JSON.parse(r.responseText)
+        u = `https://i.imgur.com/${res.data.id}.png`  
+        this.setState({ profile_pic: u,
+        loading: false })     
+      }   
+    }       
+  }
   render() {
   return (
       <section className="editProfile">

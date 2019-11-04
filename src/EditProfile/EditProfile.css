@@ -1,9 +1,26 @@
 .editProfileForm {
+    margin-top: 50px;
     margin-right: auto;
     margin-left: auto;
     width: 300px;
+    background-color: rgb(143, 128, 130);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 20px 11px 21px -8px rgba(0, 0, 0.5, 0.5);
+}
+
+.editProfilePic {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-weight: bolder;
 }
 
 .editBio {
     display: block;
+    font-family: 'Playfair Display', serif;
+    font-weight: bolder;
+}
+
+input.input-image:hover {
+    cursor: pointer;
 }

@@ -69,17 +69,20 @@ class MyPosts extends Component {
               <Link to={`/EditPost/${post.id}`} className="messageLink">Edit Post</Link>
           </section>
       ))   
+      console.log(listOfPosts.length)
   return (
       <section id="board">
           <h1 className="projectBoard">My Posts</h1>
           {listOfPosts.length === 0 ?
-          <p>Uh oh... You have no posts!</p>
+          <p className="noPosts">Uh oh... You have no posts! Create a post?<span><Link to='/Board' className="goToBoard">Go!</Link></span></p>
           : <section>{listOfPosts}</section>}
-        <div className="top">
-        <span><FontAwesomeIcon icon={faArrowUp} size="1x" className="arrow" /></span>
-        <a href="#board" className="backToTop">Back To Top</a>
-        <span><FontAwesomeIcon icon={faArrowUp} size="1x" className="arrow" /></span>
-        </div>
+          {listOfPosts.length > 0 ?
+          <div className="top">
+          <span><FontAwesomeIcon icon={faArrowUp} size="1x" className="arrow" /></span>
+          <a href="#board" className="backToTop">Back To Top</a>
+          <span><FontAwesomeIcon icon={faArrowUp} size="1x" className="arrow" /></span>
+          </div>
+          : null}
       </section>
         )
     }

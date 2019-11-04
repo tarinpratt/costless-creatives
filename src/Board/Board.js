@@ -50,8 +50,8 @@ class Board extends Component {
             this.setState({
                 posts: [...this.state.posts, post]
             })
-            this.props.history.push('/Board')
         })
+        this.props.history.push('/Board')
       }
 
       handleChangeDescription = e => {
@@ -82,16 +82,17 @@ class Board extends Component {
       }
 
   render() {
+    console.log(new Date)
       const allPosts = this.state.posts
       const listOfPosts = allPosts.map((post, index) => (
           <section key={index} className="postings">
               <ul className="postingsList">
               <li className="postUsername">
                   <Link to={`/Profile/${post.user.id}`} className="profileLink">
-                  <span><img src={Collab} className="collabPicBoard" alt="collaboration" /></span>
+                  <img src={Collab} className="collabPicBoard" alt="collaboration" />
                   <span className="cut">View </span>
-                  {post.user.username}'s 
-                  <span className="cut">Profile</span>
+                   {post.user.username}'s 
+                  <span className="cut"> Profile</span>
                   </Link>
               </li>
               <li className="postDate">
@@ -131,7 +132,7 @@ class Board extends Component {
           </input>
       </label>
       { this.state.loading === true ?
-      <p>Loading...</p>
+      <p className="loading">Loading Picture...</p>
       : null }
       <button type="submit" className="postSubmit">Post Project</button>
       </form>

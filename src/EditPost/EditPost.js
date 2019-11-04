@@ -122,7 +122,6 @@ handleDelete = e =>  {
             console.error(error)
         })
     }
-
   render() {
   return (
       <section className="editProfile">

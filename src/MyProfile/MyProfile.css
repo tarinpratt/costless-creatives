@@ -27,10 +27,28 @@ p {
     border-radius: 20px;  
 }
 
+.goTo {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    background-color: rgb(42, 41, 54);
+    border-radius: 20px;
+    height: 50px;
+}
+
+.goTo:hover {
+    border: 5px solid lightpink;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
 .collabPicProf {
+    margin-top: 20px;
     border-radius: 200px;
     height: 200px;
     width: 200px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .addButton:hover, a.addProfButton:hover {

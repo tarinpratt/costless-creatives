@@ -59,11 +59,18 @@ componentDidMount(){
       {mapped}
     <section className="addButton">
       {userProfile.length === 0 ? 
-      <Link to='/AddProfile' className="addProfButton">Oops! You don't have a profile yet. Create one now!
+      <Link to='/AddProfile' className="addProfButton">Oops! You don't have a profile yet.
+      <button className="goTo">Create one now!</button> 
       <span><img src={Collab} className="collabPicProf" alt="collaboration" /></span>
       </Link>
-      : null }  
+      : null } 
     </section> 
+    {userProfile.length > 0 ?
+      <section>
+      <Link to ={'/Board'} className="messageLink">Go To Project Board</Link>
+      <Link to ={'/MyPosts'} className="messageLink">Go To My Posts</Link>
+      </section>
+      : null } 
     </div>   )
   }  
 }

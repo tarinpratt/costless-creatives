@@ -29,7 +29,6 @@ class AddProfile extends Component {
         })
       }
 
-  
       handleChangeBio = e => {
         this.setState({ bio: e.target.value })
       };
@@ -39,9 +38,7 @@ class AddProfile extends Component {
         const d = new FormData()
         const e = document.getElementsByClassName('input-image')[0].files[0]
         let u
-    
         d.append('image', e)
-    
         r.open('POST', 'https://api.imgur.com/3/image/')
         r.setRequestHeader('Authorization', `Client-ID 1c71a0d4119b323`)
         r.send(d)
@@ -59,7 +56,6 @@ class AddProfile extends Component {
         }       
       }
 
- 
   render() {
   return (
       <section className="editProfile">
@@ -76,7 +72,7 @@ class AddProfile extends Component {
         </input>
     </label>
     { this.state.loading === true ?
-    <p>Loading...</p>
+    <p className="loading">Loading...</p>
     : null } 
     <label htmlFor="editBio" className="editBio">
         About Me
