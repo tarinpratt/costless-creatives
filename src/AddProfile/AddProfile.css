@@ -1,0 +1,21 @@
+.btn {
+    margin-top: 20px;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    background-color: rgb(42, 41, 54);
+    color: white;
+}
+
+.btn:hover {
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: rgb(42, 41, 54);
+
+}

@@ -45,19 +45,22 @@ class AddProfile extends Component {
         r.open('POST', 'https://api.imgur.com/3/image/')
         r.setRequestHeader('Authorization', `Client-ID 1c71a0d4119b323`)
         r.send(d)
+        this.setState({
+          loading: true
+        })
         r.onreadystatechange = () => {
           if(r.status === 200 && r.readyState === 4) {
             let res = JSON.parse(r.responseText)
             u = `https://i.imgur.com/${res.data.id}.png`  
-            console.log(u) 
-            this.setState({ profile_pic: u })     
+            this.setState({ 
+              profile_pic: u,
+              loading: false })     
           }   
         }       
-}
+      }
 
  
   render() {
-   
   return (
       <section className="editProfile">
     <form className="editProfileForm" role='post' onSubmit={this.handleSubmit}>
@@ -72,10 +75,9 @@ class AddProfile extends Component {
         accept="image/*">
         </input>
     </label>
-    {this.state.profile_pic === !null 
-    ? <p>Loading...</p>
-    : <p>Not Loading</p>
-  }
+    { this.state.loading === true ?
+    <p>Loading...</p>
+    : null } 
     <label htmlFor="editBio" className="editBio">
         About Me
         <textarea

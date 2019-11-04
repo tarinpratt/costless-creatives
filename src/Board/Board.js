@@ -50,11 +50,10 @@ class Board extends Component {
             this.setState({
                 posts: [...this.state.posts, post]
             })
-            // this.props.history.push('/Board')
+            this.props.history.push('/Board')
         })
       }
 
-  
       handleChangeDescription = e => {
         this.setState({ description: e.target.value })
       };
@@ -64,22 +63,23 @@ class Board extends Component {
         const d = new FormData()
         const e = document.getElementsByClassName('input-image')[0].files[0]
         let u
-    
         d.append('image', e)
-    
         r.open('POST', 'https://api.imgur.com/3/image/')
         r.setRequestHeader('Authorization', `Client-ID 1c71a0d4119b323`)
         r.send(d)
+        this.setState({
+          loading: true
+        })
         r.onreadystatechange = () => {
           if(r.status === 200 && r.readyState === 4) {
             let res = JSON.parse(r.responseText)
             u = `https://i.imgur.com/${res.data.id}.png`  
-            console.log(u) 
-            this.setState({ project_pic: u })     
+            this.setState({ 
+              project_pic: u,
+              loading: false })     
           }   
         }       
 }
-
 
   render() {
       const allPosts = this.state.posts
@@ -102,8 +102,7 @@ class Board extends Component {
               </ul>
               <a href={`mailto:${post.user.email}`} className="messageLink">Message {post.user.username}</a>
           </section>
-      ))
-      
+      ))     
   return (
       <section id="board">
           <h1 className="projectBoard">Project Board</h1>
@@ -119,6 +118,9 @@ class Board extends Component {
         required>
         </textarea>
     </label>
+    { this.state.loading === true ?
+    <p>Loading...</p>
+    : null }
     <label htmlFor="pics" className="post">
         Upload Pictures
         <input 

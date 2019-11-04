@@ -8,6 +8,7 @@ class Nav extends Component {
       <nav role="navigation">
           <Link to='/MyProfile' className="nav">Profile</Link>
           <Link to='/Board' className="nav">Project Board</Link>
+          <Link to='/MyPosts' className="nav">My Posts</Link>
       </nav>
 
 

@@ -21,9 +21,9 @@ p {
     margin-left: auto;
     font-family: 'Playfair Display', serif;
     font-size: 20px;
-    color: white;
+    color: rgb(42, 41, 54);
     text-decoration: none;
-    background-color: rgb(42, 41, 54);
+    /* background-color: rgb(42, 41, 54); */
     border-radius: 20px;  
 }
 
@@ -36,11 +36,11 @@ p {
 .addButton:hover, a.addProfButton:hover {
     font-weight: bolder;
     cursor: pointer;
-    background-color: rgb(102, 3, 19);
+    /* background-color: rgb(102, 3, 19); */
 }
 
 a.addProfButton {
-    color: white;
+    color: rgb(42, 41, 54);
     text-decoration: none;
 }
 .imgContainer {

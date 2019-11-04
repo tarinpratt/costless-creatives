@@ -65,7 +65,6 @@ componentDidMount() {
 }
 
   render() {
-    console.log(this.state.email)
   return (
       <section className="myProfile">
           <h1>{this.state.username}</h1>

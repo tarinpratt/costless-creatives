@@ -7,8 +7,10 @@ import Landing from './Landing/Landing'
 import Board from './Board/Board'
 import DemoPage from './DemoPage/DemoPage'
 import MyProfile from './MyProfile/MyProfile'
+import MyPosts from './MyPosts/MyPosts'
 import AddProfile from './AddProfile/AddProfile'
 import EditProfile from './EditProfile/EditProfile'
+import EditPost from './EditPost/EditPost'
 import Profile from './Profile/Profile'
 import PrivateRoute from './Utils/PrivateRoute'
 import PublicRoute from './Utils/PublicRoute'
@@ -25,9 +27,11 @@ class App extends Component {
       <PublicRoute path='/SignUp' component={SignUpPage}/>
       <PublicRoute path='/Demo' component={DemoPage} />
       <PrivateRoute path='/MyProfile' component={MyProfile} />
+      <PrivateRoute path='/MyPosts' component={MyPosts} />
       <PrivateRoute path='/AddProfile' component={AddProfile} />
       <PrivateRoute path='/Profile/:userId' component={Profile} />
       <PrivateRoute path='/EditProfile/:profileId' component={EditProfile} />
+      <PrivateRoute path='/EditPost/:postId' component={EditPost} />
       <PrivateRoute path='/Board' component={Board}/>
     </main>
   );
