@@ -9,6 +9,7 @@ import DemoPage from './DemoPage/DemoPage'
 import MyProfile from './MyProfile/MyProfile'
 import MyPosts from './MyPosts/MyPosts'
 import AddProfile from './AddProfile/AddProfile'
+import AddPost from './AddPost/AddPost'
 import EditProfile from './EditProfile/EditProfile'
 import EditPost from './EditPost/EditPost'
 import Profile from './Profile/Profile'
@@ -29,6 +30,7 @@ class App extends Component {
       <PrivateRoute path='/MyProfile' component={MyProfile} />
       <PrivateRoute path='/MyPosts' component={MyPosts} />
       <PrivateRoute path='/AddProfile' component={AddProfile} />
+      <PrivateRoute path='/AddPost' component={AddPost} />
       <PrivateRoute path='/Profile/:userId' component={Profile} />
       <PrivateRoute path='/EditProfile/:profileId' component={EditProfile} />
       <PrivateRoute path='/EditPost/:postId' component={EditPost} />

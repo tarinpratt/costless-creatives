@@ -127,6 +127,7 @@ a.messageLink {
 a.messageLink:hover {    
     font-weight: bolder;
     background-color: rgb(102, 3, 19);
+    cursor: pointer;
 }
 
 .postImage {

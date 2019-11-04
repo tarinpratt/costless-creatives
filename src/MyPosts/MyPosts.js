@@ -52,7 +52,7 @@ class MyPosts extends Component {
   render() {
       const allProfiles = this.state.profiles
       const user_id = allProfiles.map((val, index) => {
-        return val.id
+        return val.user_id
       })  
       const currentPosts = this.state.posts.filter((post) => post.user.id === user_id[0])
       const listOfPosts = currentPosts.map((post, index) => (
@@ -69,12 +69,11 @@ class MyPosts extends Component {
               <Link to={`/EditPost/${post.id}`} className="messageLink">Edit Post</Link>
           </section>
       ))   
-      console.log(listOfPosts.length)
   return (
       <section id="board">
           <h1 className="projectBoard">My Posts</h1>
           {listOfPosts.length === 0 ?
-          <p className="noPosts">Uh oh... You have no posts! Create a post?<span><Link to='/Board' className="goToBoard">Go!</Link></span></p>
+          <p className="noPosts">Uh oh... You have no posts! Create a post?<span><Link to='/AddPost' className="goToBoard">Go!</Link></span></p>
           : <section>{listOfPosts}</section>}
           {listOfPosts.length > 0 ?
           <div className="top">
