@@ -30,3 +30,7 @@
 .signUpSubmit:hover {
     cursor: pointer;
 }
+
+.passwordRules {
+    font-size: 12px;
+}

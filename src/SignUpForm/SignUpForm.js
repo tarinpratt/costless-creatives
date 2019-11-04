@@ -11,32 +11,30 @@ class SignUpForm extends Component {
            loading: false,
            error: null }
 
-          handleSubmit = ev => {
-            ev.preventDefault()
-            this.setState({ 
-              loading: true,
-              error: null })
-              const { username, email, password } = ev.target
-             AuthApiService.postUser({
-               username: username.value,
-               email: email.value,
-               password: password.value,
-             })
-               .then(user => {
-        
-            username.value = ''
-            email.value = ''
-            password.value = ''
-            this.props.onRegistrationSuccess()
-            this.setState({
-              loading: false
-            })
-               })
-              .catch(res => {
-                this.setState({ error: res.error})
-              })
-          }
-        
+    handleSubmit = ev => {
+      ev.preventDefault()
+      this.setState({ 
+        loading: true,
+        error: null })
+        const { username, email, password } = ev.target
+      AuthApiService.postUser({
+        username: username.value,
+        email: email.value,
+        password: password.value,
+      })
+        .then(user => {
+          username.value = ''
+          email.value = ''
+          password.value = ''
+          this.props.onRegistrationSuccess()
+          this.setState({
+            loading: false
+          })
+        })
+        .catch(res => {
+          this.setState({ error: res.error})
+        })
+    } 
     render() {
           const { error } = this.state
   return (
@@ -72,11 +70,11 @@ class SignUpForm extends Component {
         required>
         </Input>
     </label>
+    <p className="passwordRules">Password must be at least 9 characters long and contain 1 upper case, lower case, number and special character </p>
     <Button type="submit" className="signUpSubmit">
         Sign Up
     </Button>
-</form>
-
+    </form>
         )
     }
 }

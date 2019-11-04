@@ -34,8 +34,8 @@ class App extends Component {
       <PrivateRoute path='/EditPost/:postId' component={EditPost} />
       <PrivateRoute path='/Board' component={Board}/>
     </main>
-  );
-}
+    );
+  }
 }
 
 export default withRouter (App);

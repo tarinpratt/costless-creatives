@@ -79,7 +79,7 @@ class Board extends Component {
               loading: false })     
           }   
         }       
-}
+      }
 
   render() {
       const allPosts = this.state.posts
@@ -88,57 +88,60 @@ class Board extends Component {
               <ul className="postingsList">
               <li className="postUsername">
                   <Link to={`/Profile/${post.user.id}`} className="profileLink">
-                  <span>
-                  <img src={Collab} className="collabPicBoard" alt="collaboration" />
-                    </span><span className="cut">View </span>{post.user.username}'s <span className="cut">Profile</span></Link>
-                  </li>
-                  <li className="postDate">
+                  <span><img src={Collab} className="collabPicBoard" alt="collaboration" /></span>
+                  <span className="cut">View </span>
+                  {post.user.username}'s 
+                  <span className="cut">Profile</span>
+                  </Link>
+              </li>
+              <li className="postDate">
                   {(moment(new Date(post.date)).format('MM / DD / YYYY'))}
-                  </li>
-                  <li className="postDescription">
-                      {post.description}
-                  </li>
+              </li>
+              <li className="postDescription">
+                  {post.description}
+              </li>
                   <img className="postImage" src={post.project_pic}/>
               </ul>
               <a href={`mailto:${post.user.email}`} className="messageLink">Message {post.user.username}</a>
           </section>
-      ))     
+         ))     
   return (
       <section id="board">
           <h1 className="projectBoard">Project Board</h1>
-    <form className="postBoard" onSubmit={this.handleSubmit}>
-    <label htmlFor="description" className="post">
-        Project Description
-        <textarea
-        className="description"
-        name="description"
-        type="text"
-        rows="5"
-        onChange={this.handleChangeDescription}
-        required>
-        </textarea>
-    </label>
-    { this.state.loading === true ?
-    <p>Loading...</p>
-    : null }
-    <label htmlFor="pics" className="post">
-        Upload Pictures
-        <input 
-        className="input-image"
-        type="file" 
-        name="pic" 
-        onChange={this.uploadImage.bind(this)}
-        accept="image/*">
-        </input>
-    </label>
+      <form className="postBoard" onSubmit={this.handleSubmit}>
+      <label htmlFor="description" className="post">
+          Project Description
+          <textarea
+          className="description"
+          name="description"
+          type="text"
+          rows="5"
+          onChange={this.handleChangeDescription}
+          required>
+          </textarea>
+      </label>
+      <label htmlFor="pics" className="post">
+          Upload Pictures
+          <input 
+          className="input-image"
+          type="file" 
+          name="pic" 
+          onChange={this.uploadImage.bind(this)}
+          accept="image/*">
+          </input>
+      </label>
+      { this.state.loading === true ?
+      <p>Loading...</p>
+      : null }
       <button type="submit" className="postSubmit">Post Project</button>
-</form>
-{listOfPosts}
-<div className="top">
-<span><FontAwesomeIcon icon={faArrowUp} size="1x" className="arrow" /></span>
-<a href="#board" className="backToTop">Back To Top</a>
-<span><FontAwesomeIcon icon={faArrowUp} size="1x" className="arrow" /></span>
-</div>
+      </form>
+      {listOfPosts}
+
+  <div className="top">
+    <span><FontAwesomeIcon icon={faArrowUp} size="1x" className="arrow" /></span>
+    <a href="#board" className="backToTop">Back To Top</a>
+    <span><FontAwesomeIcon icon={faArrowUp} size="1x" className="arrow" /></span>
+  </div>
 </section>
         )
     }

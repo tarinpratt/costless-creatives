@@ -28,7 +28,6 @@ const ProfileApiService = {
       )
   },
 
-
   postProfile(profile_pic, bio) {
     return fetch(`${config.API_ENDPOINT}/profile`, {
       method: 'POST',

@@ -29,15 +29,12 @@ class Demo extends Component {
             this.props.onLoginSuccess()
             this.setState({
               loading: false
-            })
-               
+            })      
           })
           .catch(res => {
             this.setState({ error: res.error })
           })
       }
-    
-    
         render() {
             const { error } = this.state
         return (
@@ -68,7 +65,7 @@ class Demo extends Component {
                   <Button type="submit" className="logInSubmit">
                       Demo
                   </Button>
-              </form>
+              </form>   
         )
     }
 }

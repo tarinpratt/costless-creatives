@@ -10,8 +10,6 @@ class Nav extends Component {
           <Link to='/Board' className="nav">Project Board</Link>
           <Link to='/MyPosts' className="nav">My Posts</Link>
       </nav>
-
-
         )
     }
 }

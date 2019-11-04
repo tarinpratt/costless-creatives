@@ -9,8 +9,6 @@ export default class LoginPage extends Component {
       push: () => {},
     },
   }
-  
-
   state = { error: null }
 
   handleRegistrationSuccess = user => {

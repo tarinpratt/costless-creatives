@@ -39,25 +39,22 @@ class Header extends Component {
       </section>
     )
   }
-        render() {
-        
-
-        return (
-            <header className='Header' role="banner">
-              {
-              TokenService.hasAuthToken()?
-              this.renderLogoutLink()
-              : this.renderLoginLink()
-              } 
-                <Link to='/'><img src={Logo} className="logo" alt="logo"/></Link>
-              {
-              TokenService.hasAuthToken() ?
-              this.renderPrivateNav()
-              : null
-              } 
-            </header>   
-
-        )
+  render() {
+  return (
+      <header className='Header' role="banner">
+        {
+        TokenService.hasAuthToken()?
+        this.renderLogoutLink()
+        : this.renderLoginLink()
+        } 
+          <Link to='/'><img src={Logo} className="logo" alt="logo"/></Link>
+        {
+        TokenService.hasAuthToken() ?
+        this.renderPrivateNav()
+        : null
+        } 
+      </header>   
+      )
     }
 }
 export default Header;

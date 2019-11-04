@@ -12,59 +12,54 @@ class LogInForm extends Component {
            loading: false,
            error: null }
      
-      handleSubmitJwtAuth = ev => {
-        ev.preventDefault()
-        this.setState({ 
-          loading: true, 
-          error: null })
-        const { username, password } = ev.target   
-        AuthApiService.postLogin({
-          username: username.value,
-          password: password.value,
-        })
-          .then(res => {
-            username.value = ''
-            password.value = ''
-            TokenService.saveAuthToken(res.authToken)
-            this.props.onLoginSuccess()
-            this.setState({
-              loading: false
-            })
-               
-          })
-          .catch(res => {
-            this.setState({ error: res.error })
-          })
-      }
-    
-    
-        render() {
-            const { error } = this.state
-        return (
-              <form className="logInForm" onSubmit={this.handleSubmitJwtAuth}>
-                <div role='alert'>
-                {error && <p className='red'>{error}</p>}
-                </div>
-                  <label htmlFor="username">
-                      Username
-                      <Input
-                      name="username"
-                      type="text"
-                      required>
-                      </Input>
-                  </label>
-                  <label htmlFor="password">
-                      Password
-                      <Input
-                      name="password"
-                      type="password"
-                      required>
-                      </Input>
-                  </label>
-                  <Button type="submit" className="logInSubmit">
-                      Log In
-                  </Button>
-              </form>
+  handleSubmitJwtAuth = ev => {
+    ev.preventDefault()
+    this.setState({ 
+      loading: true, 
+      error: null })
+    const { username, password } = ev.target   
+    AuthApiService.postLogin({
+      username: username.value,
+      password: password.value,
+    })
+      .then(res => {
+        username.value = ''
+        password.value = ''
+        TokenService.saveAuthToken(res.authToken)
+        this.props.onLoginSuccess()
+        this.setState({
+          loading: false
+        })      
+      })
+      .catch(res => {
+        this.setState({ error: res.error })
+      })
+  }
+  render() {
+      const { error } = this.state
+  return (
+        <form className="logInForm" onSubmit={this.handleSubmitJwtAuth}>
+          <div role='alert'>
+          {error && <p className='red'>{error}</p>}
+          </div>
+            <label htmlFor="username">
+                Username
+                <Input
+                name="username"
+                type="text"
+                required>
+                </Input>
+            </label>
+            <label htmlFor="password">
+                Password
+                <Input
+                name="password"
+                type="password"
+                required>
+                </Input>
+            </label>
+            <Button type="submit" className="logInSubmit">Log In</Button>
+        </form>
         )
     }
 }

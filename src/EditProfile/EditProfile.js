@@ -20,13 +20,13 @@ componentDidMount() {
       method: 'GET',
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`
-    }
- })
-  .then(res => {
-      if(!res.ok)
-         return res.json().then(error => Promise.reject(error))
-         return res.json()
-  })
+          }
+      })
+      .then(res => {
+          if(!res.ok)
+          return res.json().then(error => Promise.reject(error))
+          return res.json()
+      })
       .then(responseData => {
         this.setState({
             id: responseData.id,
@@ -45,51 +45,46 @@ componentDidMount() {
     this.setState({ bio : e.target.value })
   };
 
-
   handleSubmit = e => {
     e.preventDefault()
     const { profileId } = this.props.match.params
     const { id, profile_pic, bio } = this.state
     const updatedProfile = {id, profile_pic, bio }
-
     fetch(`${config.API_ENDPOINT}/profile/${profileId}`, {
-   method: 'PATCH',
-   body: JSON.stringify(updatedProfile),
-   headers: {
-      'content-type': 'application/json',
-      'authorization': `bearer ${TokenService.getAuthToken()}`
- }
-})
-.then(res => {
-  if(!res.ok)
-      return res.json().then(error => Promise.reject(error))
-})
-.then(() => {
-  this.resetFields(updatedProfile)
-  this.props.history.push('/MyProfile')
-})
-.catch(error => {
-  console.error(error)
-  this.setState({error})
-})
-
-}
-resetFields = (newFields) => {
-  this.setState({
-    id: newFields.id || '',
-    profile_pic: newFields.profile_pic || '',
-    bio: newFields.bio || ''
-  })
-}
+      method: 'PATCH',
+      body: JSON.stringify(updatedProfile),
+      headers: {
+          'content-type': 'application/json',
+          'authorization': `bearer ${TokenService.getAuthToken()}`
+    }
+    })
+      .then(res => {
+        if(!res.ok)
+        return res.json().then(error => Promise.reject(error))
+      })
+      .then(() => {
+        this.resetFields(updatedProfile)
+        this.props.history.push('/MyProfile')
+      })
+      .catch(error => {
+        console.error(error)
+        this.setState({error})
+      })
+      }
+      resetFields = (newFields) => {
+        this.setState({
+          id: newFields.id || '',
+          profile_pic: newFields.profile_pic || '',
+          bio: newFields.bio || ''
+        })
+      }
 
 uploadImage() {
   const r = new XMLHttpRequest()
   const d = new FormData()
   const e = document.getElementsByClassName('input-image')[0].files[0]
   let u
-
   d.append('image', e)
-
   r.open('POST', 'https://api.imgur.com/3/image/')
   r.setRequestHeader('Authorization', `Client-ID 1c71a0d4119b323`)
   r.send(d)
@@ -109,35 +104,35 @@ uploadImage() {
   render() {
   return (
       <section className="editProfile">
-    <form className="editProfileForm" onSubmit={this.handleSubmit}>
-    <h1>Edit Profile</h1>
-    <label htmlFor="editProfilePic" className="editProfilePic">
-        Profile Picture
-        <input 
-        className="input-image"
-        type="file" 
-        name="profile_pic" 
-        onChange={this.uploadImage.bind(this)}
-        accept="image/*">
-        </input>
-    </label>
-    {this.state.loading === true ?
-    <p>Loading...</p>
-    : null}
-    <label htmlFor="editBio" className="editBio">
-        About Me
-        <textarea
-        className="editBio"
-        name="editBio"
-        type="text"
-        rows="5"
-        onChange={this.handleChangeBio}
-        >
-        </textarea>
-    </label>
-    <button type="submit" className="btn">Save</button>
-  </form>
-      </section>
+        <form className="editProfileForm" onSubmit={this.handleSubmit}>
+        <h1>Edit Profile</h1>
+        <label htmlFor="editProfilePic" className="editProfilePic">
+            Profile Picture
+            <input 
+            className="input-image"
+            type="file" 
+            name="profile_pic" 
+            onChange={this.uploadImage.bind(this)}
+            accept="image/*">
+            </input>
+        </label>
+        {this.state.loading === true ?
+        <p>Loading...</p>
+        : null}
+        <label htmlFor="editBio" className="editBio">
+            About Me
+            <textarea
+            className="editBio"
+            name="editBio"
+            type="text"
+            rows="5"
+            onChange={this.handleChangeBio}
+            >
+            </textarea>
+        </label>
+        <button type="submit" className="btn">Save</button>
+      </form>
+    </section>
     )
   }  
 }

@@ -58,13 +58,14 @@ componentDidMount(){
     <div>
       {mapped}
     <section className="addButton">
-      {userProfile.length === 0
-      ? <Link to='/AddProfile' className="addProfButton">Oops! You don't have a profile yet. Create one now!                  <span>
-      <img src={Collab} className="collabPicProf" alt="collaboration" />
-        </span></Link>
+      {userProfile.length === 0 ? 
+      <Link to='/AddProfile' className="addProfButton">Oops! You don't have a profile yet. Create one now!
+      <span><img src={Collab} className="collabPicProf" alt="collaboration" /></span>
+      </Link>
       : null }  
     </section> 
     </div>   )
   }  
 }
+
 export default MyProfile;

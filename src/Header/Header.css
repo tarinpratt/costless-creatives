@@ -30,7 +30,6 @@ a.acctButtons {
 .acctButtons:hover {
     cursor: pointer;
     font-weight: bolder;
-    /* color: rgb(158, 111, 119); */
 }
 
 .logo {
@@ -42,16 +41,12 @@ a.acctButtons {
 }
 
 .logInForm {
-    /* display: flex;
-    flex-direction: column;
-    float: right; */
     width: 210px;
     margin-right: auto;
     margin-left: auto;
     border: 1px solid black;
     border-radius: 5px;
     padding: 10px;
-    
     background-color: rgb(143, 128, 130);
 }
 

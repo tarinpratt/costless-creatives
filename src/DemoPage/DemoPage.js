@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Demo from '../Demo/Demo'
 import { Section } from '../Utils/Utils'
 
-
 export default class DemoPage extends Component {
   static defaultProps = {
     location: {},
