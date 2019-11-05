@@ -48,7 +48,7 @@ componentDidMount(){
       <section className="myProfile" key={index}>
           {currentUserVals}
             <div className="imgContainer">
-            <img className="responsive" src={val.profile_pic}/>
+            <img className="responsive" src={val.profile_pic} alt="profile"/>
              </div>           
         <p>{val.bio}</p>
         <Link to={`/EditProfile/${val.user_id}`} className="messageLink">Edit Profile</Link>

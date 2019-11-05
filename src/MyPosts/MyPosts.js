@@ -64,7 +64,7 @@ class MyPosts extends Component {
                 <li className="postDescription">
                     {post.description}
                 </li>
-                  <img className="postImage" src={post.project_pic}/>
+                  <img className="postImage" src={post.project_pic} alt="project"/>
               </ul>
               <Link to={`/EditPost/${post.id}`} className="messageLink">Edit Post</Link>
           </section>

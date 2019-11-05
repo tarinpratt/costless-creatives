@@ -58,7 +58,7 @@ class Board extends Component {
               <li className="postDescription">
                   {post.description}
               </li>
-                  <img className="postImage" src={post.project_pic}/>
+                  <img className="postImage" src={post.project_pic} alt="profile" />
               </ul>
               <a href={`mailto:${post.user.email}`} className="messageLink">Message {post.user.username}</a>
           </section>

@@ -68,7 +68,7 @@ componentDidMount() {
       <section className="myProfile">
           <h1>{this.state.username}</h1>
           <div className="imgContainer">
-            <img className="responsive" src={this.state.profile_pic}/>
+            <img className="responsive" src={this.state.profile_pic} alt="profile"/>
           </div>
         <p>{this.state.bio}</p>
         <a href={`mailto:${this.state.email}?subject=A message from Costless Creatives&body=I saw your profile on Costless Creatives and am interested in connecting!`} className="messageLink">Message {this.state.username}</a>
