@@ -51,10 +51,10 @@ a.acctButtons {
     width: 150px;
     margin-right: auto;
     margin-left: auto;
-    border: 1px solid black;
     border-radius: 5px;
     padding: 10px;
     background-color: rgb(143, 128, 130);
+    box-shadow: 20px 11px 21px -8px rgba(0, 0, 0.5, 0.5);
 }
 
 input {
