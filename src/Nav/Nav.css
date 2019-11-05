@@ -3,9 +3,13 @@
     padding: 10px;
     font-family: 'Playfair Display', serif;
     font-size: 18px;
-    color: rgb(42, 41, 54);
+    color: rgb(12, 7, 75);
+    
 }
 
 .nav:hover {
+    color: white;
     font-weight: bolder;
+    background-color: rgb(102, 3, 19);
+    border-radius: 20px;
 }

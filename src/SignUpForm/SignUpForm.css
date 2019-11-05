@@ -11,6 +11,8 @@
     margin-right: auto;
     margin-left: auto;
     background-color: rgb(143, 128, 130);
+    font-family: 'Playfair Display', serif;
+    font-weight: bolder;
 }
 
 .signUpInput {
@@ -29,6 +31,7 @@
 
 .signUpSubmit:hover {
     cursor: pointer;
+    font-weight: bolder;
 }
 
 .passwordRules {

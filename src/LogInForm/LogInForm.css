@@ -1,0 +1,13 @@
+.logInSubmit {
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    color: lightgray;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    background-color: rgb(42, 41, 54);
+}

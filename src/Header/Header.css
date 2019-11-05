@@ -25,15 +25,20 @@ a.acctButtons {
     color: rgb(42, 41, 54);
     float: right;
     text-decoration: none;
+    padding: 5px;
 }
 
 .acctButtons:hover {
     cursor: pointer;
     font-weight: bolder;
+    color: white;
+    background-color: rgb(102, 3, 19);
+    border-radius: 20px;
 }
 
 .logo {
     border-radius: 40px;
+    margin-left: 10px;
 }
 
 .logo:hover {
@@ -41,7 +46,9 @@ a.acctButtons {
 }
 
 .logInForm {
-    width: 210px;
+    font-weight: bolder;
+    font-family: 'Playfair Display', serif;
+    width: 150px;
     margin-right: auto;
     margin-left: auto;
     border: 1px solid black;
@@ -67,4 +74,8 @@ input {
 
 .logInSubmit:hover {
     cursor: pointer;
+    font-weight: bolder;
+    color: white;
+    background-color: rgb(102, 3, 19);
+    border-radius: 20px;
 }
