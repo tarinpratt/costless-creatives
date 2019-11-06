@@ -1,6 +1,6 @@
 # **Costless Creatives**
 
-Costless Creatives makes it safe to network without having to address the uncomfortable subject of money. Costless Creatives allows you to post about any kind of projects you're looking to create or be a part of. Whether you're simply new to the field of entertainment and looking to network, if you're looking for people to be a part of a passison project you'd like to create, or if you're simply just looking to create and exchange content for exposure. We're just passionate artists looking to connect!
+![#CBF1F1]Costless Creatives makes it safe to network without having to address the uncomfortable subject of money. Costless Creatives allows you to post about any kind of projects you're looking to create or be a part of. Whether you're simply new to the field of entertainment and looking to network, if you're looking for people to be a part of a passison project you'd like to create, or if you're simply just looking to create and exchange content for exposure. We're just passionate artists looking to connect!`![#CBF1F1]`
 
 ## **Demo**
 
