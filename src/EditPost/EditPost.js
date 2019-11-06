@@ -138,7 +138,7 @@ handleDelete = e =>  {
             </input>
         </label>
         { this.state.loading === true ?
-        <p>Loading...</p>
+        <p>Loading Picture...</p>
         : null }
         <label htmlFor="editDescription" className="editDescription">
             Project Description

@@ -3,8 +3,9 @@
     flex-direction: column;
     box-shadow: 20px 11px 21px -8px rgba(0, 0, 0.5, 0.5);
     border-radius: 5px;
-    width: 300px;
+    width: 250px;
     padding: 20px;
+    margin-top: 40px;
 }
 
 .signUpForm {
@@ -37,3 +38,8 @@
 .passwordRules {
     font-size: 12px;
 }
+
+.red {
+    color: rgb(170, 53, 53);
+}
+

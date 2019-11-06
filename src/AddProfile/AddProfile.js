@@ -8,7 +8,6 @@ class AddProfile extends Component {
         this.state = {
             profile: [],
             profile_pic: '',
-            selectedFile: null,
             bio: '',
             loading: false
         };
@@ -72,7 +71,7 @@ class AddProfile extends Component {
         </input>
     </label>
     { this.state.loading === true ?
-    <p className="loading">Loading...</p>
+    <p className="loading">Loading Picture...</p>
     : null } 
     <label htmlFor="editBio" className="editBio">
         About Me

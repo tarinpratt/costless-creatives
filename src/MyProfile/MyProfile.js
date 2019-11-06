@@ -41,7 +41,7 @@ componentDidMount(){
     const currentUser = users.filter((user) => user.id === user_id[0])
     const currentUserVals = currentUser.map((val, index) => (
       <section key={index}>
-        <h1>{val.username}</h1>
+        <h1 className="profName">{val.username}</h1>
       </section>
     ))  
     const mapped = userProfile.map((val, index) => (
@@ -66,7 +66,7 @@ componentDidMount(){
       : null } 
     </section> 
     {userProfile.length > 0 ?
-      <section>
+      <section className="myProfile">
       <Link to ={'/Board'} className="messageLink">Go To Project Board</Link>
       <Link to ={'/MyPosts'} className="messageLink">Go To My Posts</Link>
       </section>

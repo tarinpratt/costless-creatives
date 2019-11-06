@@ -37,7 +37,7 @@ p {
 }
 
 .goTo:hover {
-    border: 5px solid lightpink;
+    border: 5px solid rgb(184, 128, 136);
     cursor: pointer;
     font-weight: bolder;
 }
@@ -70,5 +70,21 @@ a.addProfButton {
     max-width: 200px;
     height: auto;
     border-radius: 20px;
+  }
+
+  .profName {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: rgb(102, 3, 19);
+  }
+
+  @media only screen and (min-width: 710px)
+  {
+      .myProfile {
+          max-width: 710px;
+          margin-right: auto;
+          margin-left: auto;
+      }
+
   }
 

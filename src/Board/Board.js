@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom'
 import moment from 'moment'
 import PostsApiService from '../Services/Posts-Api-Service'
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUp, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Collab from '../images/collab.jpg';
 import './Board.css'
@@ -16,7 +16,8 @@ class Board extends Component {
             project_pic: '',
             description: '',
             loading: false  
-        };   
+        };  
+     
     }
     componentDidMount(){
         PostsApiService.getPosts()
@@ -58,7 +59,10 @@ class Board extends Component {
               <li className="postDescription">
                   {post.description}
               </li>
-                  <img className="postImage" src={post.project_pic} alt="profile" />
+                {post.project_pic.length === 0 ?
+                null
+                : <img className="postImage" src={post.project_pic} alt="project" />
+                }  
               </ul>
               <a href={`mailto:${post.user.email}`} className="messageLink">Message {post.user.username}</a>
           </section>
@@ -66,6 +70,8 @@ class Board extends Component {
   return (
       <section id="board">
           <h1 className="projectBoard">Project Board</h1>
+          <div className="addPostContainer">
+          <Link to='/AddPost' className="addPost"><span><FontAwesomeIcon icon={faPlus} size="1x" className="arrow" /></span>Add New Post</Link></div>
       {listOfPosts}
   <div className="top">
     <span><FontAwesomeIcon icon={faArrowUp} size="1x" className="arrow" /></span>

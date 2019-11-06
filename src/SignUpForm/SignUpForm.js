@@ -43,7 +43,7 @@ class SignUpForm extends Component {
         <div role='alert'>
           {error && <p className='red'>{error}</p>}
         </div>
-    <label htmlFor="username">
+    <label htmlFor="username" className="inputLabel">
         Username
         <Input
         className="signUpInput"
@@ -52,7 +52,7 @@ class SignUpForm extends Component {
         required>
         </Input>
     </label>
-    <label htmlFor="email">
+    <label htmlFor="email" className="inputLabel">
         Email
         <Input
         className="signUpInput"
@@ -61,7 +61,7 @@ class SignUpForm extends Component {
         required>
         </Input>
     </label>
-    <label htmlFor="password">
+    <label htmlFor="password" className="inputLabel">
         Password
         <Input
         className="signUpInput"

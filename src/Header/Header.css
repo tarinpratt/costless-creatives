@@ -37,12 +37,13 @@ a.acctButtons {
 }
 
 .logo {
+    height: 70px;
     border-radius: 40px;
     margin-left: 10px;
 }
 
 .logo:hover {
-    border: 5px solid lightpink;
+    border: 5px solid rgb(184, 128, 136);
 }
 
 .logInForm {
@@ -51,6 +52,7 @@ a.acctButtons {
     width: 150px;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 40px;
     border-radius: 5px;
     padding: 10px;
     background-color: rgb(143, 128, 130);
@@ -58,7 +60,7 @@ a.acctButtons {
 }
 
 input {
-    height: 20px;
+    height: 35px;
     border-radius: 5px;
     margin: 5px;
 }
@@ -79,3 +81,19 @@ input {
     background-color: rgb(102, 3, 19);
     border-radius: 20px;
 }
+
+@media only screen and (max-width: 341px)
+  {
+      .headerContainer {
+        width: 280px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+  }
+
+@media only screen and (max-width: 450px)
+  {
+      .logo {
+          height: 50px;
+      }
+  }

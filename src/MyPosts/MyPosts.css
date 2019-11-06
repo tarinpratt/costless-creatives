@@ -20,5 +20,5 @@
 .goToBoard:hover {
     cursor: pointer;
     font-size: 30px;
-    border: 5px solid lightpink;
+    border: 5px solid rgb(184, 128, 136);
 }

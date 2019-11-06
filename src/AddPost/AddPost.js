@@ -55,6 +55,9 @@ uploadImage() {
       }   
     }       
   } 
+  refreshPage() {
+    window.location.reload(false);
+  }
 
   render() {
       return (
@@ -83,7 +86,7 @@ uploadImage() {
         { this.state.loading === true ?
         <p className="loading">Loading Picture...</p>
         : null }
-        <button type="submit" className="postSubmit">Post Project</button>
+        <button type="submit" className="btn">Post Project</button>
         </form>
 
       )

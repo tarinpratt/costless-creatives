@@ -47,7 +47,7 @@ class Header extends Component {
         this.renderLogoutLink()
         : this.renderLoginLink()
         } 
-          <Link to='/'><img src={Logo} className="logo" alt="logo"/></Link>
+          <div className="logoContainer"><Link to='/'><img src={Logo} className="logo" alt="logo"/></Link></div>
         {
         TokenService.hasAuthToken() ?
         this.renderPrivateNav()

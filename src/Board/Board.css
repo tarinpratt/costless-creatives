@@ -1,28 +1,35 @@
-.postBoard {
-    width: 280px;
-    padding: 10px;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: rgb(143, 128, 130);
-    border-radius: 10px;
-    box-shadow: 20px 11px 21px -8px rgba(0, 0, 0.5, 0.5);
-}
-
 h1.projectBoard {
     height: 50px;
     color :white;
     background-color: rgb(104, 75, 79);
 }
+
+.addPostContainer {
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+a.addPost {
+    text-decoration: none;
+    background-color: rgb(143, 128, 130);
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+a.addPost:hover {
+    cursor: pointer;
+    font-size: 22px;
+}
+
 .post {
     display: block;
     font-weight: bold;
     font-family: 'Playfair Display', serif;
-}
-
-textarea {
-    display: block;
-    width: 280px;
-    border-radius: 10px;
 }
 
 .postSubmit {
@@ -33,13 +40,6 @@ textarea {
     font-size: 15px;
     background-color: lightgray;
     color: rgb(42, 41, 54);
-}
-
-.postSubmit:hover {
-    cursor: pointer;
-    font-weight: bolder;
-    background-color: lightpink;
-    border: 2px solid lightpink;
 }
 
 .postingsList {
@@ -188,7 +188,7 @@ a.messageLink:hover {
 }
 
 .loading {
-    color: lightpink;
+    color: rgb(243, 200, 207);
     font-weight: bold;
     font-family: 'Playfair Display', serif;
 }
