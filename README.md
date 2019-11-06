@@ -1,68 +1,36 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# **Costless Creatives**
 
-## Available Scripts
+Costless Creatives makes it safe to network without having to address the uncomfortable subject of money. Costless Creatives allows you to post about any kind of projects you're looking to create or be a part of. Whether you're simply new to the field of entertainment and looking to network, if you're looking for people to be a part of a passison project you'd like to create, or if you're simply just looking to create and exchange content for exposure. We're just passionate artists looking to connect!
 
-In the project directory, you can run:
+## **Demo**
 
-### `npm start`
+[Live Demo](https://costless-creatives.pratttarin.now.sh/)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Costless Creatives screenshot](/src/images/landing.png)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+First, users can use the demo account or sign up. 
 
-### `npm test`
+![Costless Creatives screenshot](/src/images/newprofile.png)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Once a user has successfully created an account they can then log in and will be routed to make a user profile. Users can add a profile pic and bio to their profile.
 
-### `npm run build`
+![Costless Creatives screenshot](/src/images/myprofile.png)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Users can then view and edit their profile.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+![Costless Creatives screenshot](/src/images/newpost.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Users can post to the project board as well as, delete and edit old posts of their own. When users view the project board they will see a list of posts from all users and have the option to directly email the user as well as view their profile. 
 
-### `npm run eject`
+![Costless Creatives screenshot](/src/images/projectboard.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## **Built With**
+* React
+* CSS
+* Node
+* Express
+* PostgreSQL
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## **API**
+* Costless-Creatives-API
+* imgur API - for image hosting
