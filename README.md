@@ -6,23 +6,23 @@ Costless Creatives makes it safe to network without having to address the uncomf
 
 [Live Demo](https://costless-creatives.pratttarin.now.sh/)
 
-![Costless Creatives screenshot](/src/images/landing.png)
+`![Costless Creatives screenshot](/src/images/landing.png)`
 
 **First, users can use the demo account or sign up.**
 
-![Costless Creatives screenshot](/src/images/newprofile.png)
+`![Costless Creatives screenshot](/src/images/newprofile.png)`
 
 **Once a user has successfully created an account they can then log in and will be routed to make a user profile. Users can add a profile pic and bio to their profile.**
 
-![Costless Creatives screenshot](/src/images/myprofile.png)
+`![Costless Creatives screenshot](/src/images/myprofile.png)`
 
 **Users can then view and edit their profile.**
 
-![Costless Creatives screenshot](/src/images/newpost.png)
+`![Costless Creatives screenshot](/src/images/newpost.png)`
 
 **Users can post to the project board as well as, delete and edit old posts of their own. When users view the project board they will see a list of posts from all users and have the option to directly email the user as well as view their profile.** 
 
-![Costless Creatives screenshot](/src/images/projectboard.png)
+`![Costless Creatives screenshot](/src/images/projectboard.png)`
 
 ## **Built With**
 * React
