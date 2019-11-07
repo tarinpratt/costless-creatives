@@ -118,7 +118,7 @@ class Board extends Component {
               View All Posts
             </button>
             : <button className="viewToday" onClick={()=>this.renderTodaysPosts()}>
-               View Today's Posts
+               Today's Posts
             </button>
             }
           </div>
