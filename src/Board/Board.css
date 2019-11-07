@@ -4,26 +4,43 @@ h1.projectBoard {
     background-color: rgb(104, 75, 79);
 }
 
+.container {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
 .addPostContainer {
-    width: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
     margin-right: auto;
     margin-left: auto;
 }
 
 a.addPost {
+    height: 35px;
+    text-decoration: none;
+    color: white;
+}
+
+button.viewToday {
     text-decoration: none;
     background-color: rgb(143, 128, 130);
     font-family: 'Playfair Display', serif;
-    font-size: 20px;
+    font-size: 15px;
     color: white;
-    padding: 10px;
+    width: 150px;
     font-weight: bold;
     border-radius: 30px;
+    display: inline-block;
+    text-align: center;
+    height: 35px;
 }
 
-a.addPost:hover {
+button.viewToday:hover {
+    height: 40px;
     cursor: pointer;
-    font-size: 22px;
+    border: 4px solid rgb(102, 3, 19);
 }
 
 .post {

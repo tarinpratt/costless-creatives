@@ -14,7 +14,6 @@ const ProfileApiService = {
           : res.json()
       )
   },
-
   getProfiles() {
     return fetch(`${config.API_ENDPOINT}/profile`, {
       headers: {
@@ -27,7 +26,6 @@ const ProfileApiService = {
           : res.json()
       )
   },
-
   postProfile(profile_pic, bio) {
     return fetch(`${config.API_ENDPOINT}/profile`, {
       method: 'POST',

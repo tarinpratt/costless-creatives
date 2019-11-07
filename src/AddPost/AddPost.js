@@ -55,10 +55,6 @@ uploadImage() {
       }   
     }       
   } 
-  refreshPage() {
-    window.location.reload(false);
-  }
-
   render() {
       return (
         <form className="postBoard" onSubmit={this.handleSubmit}>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import config from '../config'
 import TokenService from '../Services/Token-Service'
-import { Link } from 'react-router-dom'
 import './Profile.css'
 
 class Profile extends Component {

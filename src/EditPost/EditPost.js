@@ -41,43 +41,43 @@ componentDidMount() {
         })
     }
 
-  handleChangeDescription = e => {
-    this.setState({ description : e.target.value })
-  };
+handleChangeDescription = e => {
+  this.setState({ description : e.target.value })
+};
 
-  handleSubmit = e => {
-    e.preventDefault()
-    const { postId } = this.props.match.params
-    const { id, project_pic, description } = this.state
-    const updatedPost = {id, project_pic, description }
-    fetch(`${config.API_ENDPOINT}/posts/${postId}`, {
-        method: 'PATCH',
-        body: JSON.stringify(updatedPost),
-        headers: {
-            'content-type': 'application/json',
-            'authorization': `bearer ${TokenService.getAuthToken()}`
-        }
-        })
-        .then(res => {
-            if(!res.ok)
-            return res.json().then(error => Promise.reject(error))
-        })
-        .then(() => {
-            this.resetFields(updatedPost)
-            this.props.history.push('/MyPosts')
-        })
-        .catch(error => {
-            console.error(error)
-            this.setState({error})
-        })
-        }
-        resetFields = (newFields) => {
-        this.setState({
-            id: newFields.id || '',
-            project_pic: newFields.project_pic || '',
-            description: newFields.description || ''
-        })
-        }
+handleSubmit = e => {
+  e.preventDefault()
+  const { postId } = this.props.match.params
+  const { id, project_pic, description } = this.state
+  const updatedPost = {id, project_pic, description }
+  fetch(`${config.API_ENDPOINT}/posts/${postId}`, {
+      method: 'PATCH',
+      body: JSON.stringify(updatedPost),
+      headers: {
+          'content-type': 'application/json',
+          'authorization': `bearer ${TokenService.getAuthToken()}`
+      }
+      })
+      .then(res => {
+          if(!res.ok)
+          return res.json().then(error => Promise.reject(error))
+      })
+      .then(() => {
+          this.resetFields(updatedPost)
+          this.props.history.push('/MyPosts')
+      })
+      .catch(error => {
+          console.error(error)
+          this.setState({error})
+      })
+      }
+      resetFields = (newFields) => {
+      this.setState({
+          id: newFields.id || '',
+          project_pic: newFields.project_pic || '',
+          description: newFields.description || ''
+      })
+      }
 
 uploadImage() {
   const r = new XMLHttpRequest()
@@ -110,8 +110,8 @@ handleDelete = e =>  {
       headers: {
         'content-type': 'application/json',
         'authorization': `bearer ${TokenService.getAuthToken()}`
-      }
-    })
+          }
+        })
         .then(res => {
             if (!res.ok) {
             return res.json().then(error => Promise.reject(error))

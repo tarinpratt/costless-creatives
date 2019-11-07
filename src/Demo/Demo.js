@@ -35,7 +35,7 @@ class Demo extends Component {
             this.setState({ error: res.error })
           })
       }
-        render() {
+    render() {
             const { error } = this.state
         return (
               <form className="logInForm" onSubmit={this.handleSubmitJwtAuth}>

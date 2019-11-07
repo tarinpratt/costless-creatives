@@ -14,7 +14,6 @@ const PostsApiService = {
           : res.json()
       )
   },
-
   getPosts() {
     return fetch(`${config.API_ENDPOINT}/posts`, {
       headers: {
@@ -27,7 +26,6 @@ const PostsApiService = {
           : res.json()
       )
   },
-
   postBoard(project_pic, description) {
     return fetch(`${config.API_ENDPOINT}/posts`, {
       method: 'POST',

@@ -35,8 +35,8 @@ class SignUpForm extends Component {
           this.setState({ error: res.error})
         })
     } 
-    render() {
-          const { error } = this.state
+render() {
+      const { error } = this.state
   return (
     <form className="signUpForm" role='post' onSubmit={this.handleSubmit}>
         <h1>Sign Up</h1>

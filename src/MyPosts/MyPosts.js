@@ -55,7 +55,6 @@ class MyPosts extends Component {
         return val.user_id
       })  
       const currentPosts = this.state.posts.filter((post) => post.user.id === user_id[0])
-      console.log(currentPosts)
       const listOfPosts = currentPosts.map((post, index) => (
           <section key={index} className="postings">
               <ul className="postingsList">
