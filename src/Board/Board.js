@@ -100,21 +100,30 @@ class Board extends Component {
          ))     
   return (
       <section id="board">
-          <h1 className="projectBoard">Project Board</h1>
+        {this.state.todaysPosts ?
+        <h1 className="projectBoard">Projects Posted Today</h1>
+        : <h1 className="projectBoard">Project Board</h1>
+        }
+          
           <div className="container">
           <div className="addPostContainer">
-          <button className="viewToday" ><Link to='/AddPost' className="addPost"><span><FontAwesomeIcon icon={faPlus} size="1x" className="arrow" /></span>New Post</Link></button>
+          <button className="viewToday" >
+            <Link to='/AddPost' className="addPost">
+            <span><FontAwesomeIcon icon={faPlus} size="1x" className="arrow" /></span>
+            New Post
+            </Link>
+            </button>
             {
               this.state.todaysPosts ?
             <button className="viewToday" onClick={()=>this.renderTodaysPosts()}>
-              All Posts
+              View All Posts
             </button>
             : <button className="viewToday" onClick={()=>this.renderTodaysPosts()}>
-              Today's Posts
+               View Today's Posts
             </button>
             }
-            </div>
-            </div>
+          </div>
+          </div>
      
             <div>
             {
