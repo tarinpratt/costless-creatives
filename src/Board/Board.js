@@ -103,7 +103,7 @@ class Board extends Component {
           <h1 className="projectBoard">Project Board</h1>
           <div className="container">
           <div className="addPostContainer">
-          <button className="viewToday" ><Link to='/AddPost' className="addPost"><span><FontAwesomeIcon icon={faPlus} size="1x" className="arrow" /></span>Add New Post</Link></button>
+          <button className="viewToday" ><Link to='/AddPost' className="addPost"><span><FontAwesomeIcon icon={faPlus} size="1x" className="arrow" /></span>New Post</Link></button>
             {
               this.state.todaysPosts ?
             <button className="viewToday" onClick={()=>this.renderTodaysPosts()}>
