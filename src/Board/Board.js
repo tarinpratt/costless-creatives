@@ -70,7 +70,7 @@ class Board extends Component {
               : <img className="postImage" src={post.project_pic} alt="project" />
               }  
             </ul>
-            <a href={`mailto:${post.user.email}`} className="messageLink">Message {post.user.username}</a>
+            <a href={`mailto:${post.user.email}?subject=A message from Costless Creatives&body=I saw your post on Costless Creatives and am interested in connecting!`} className="messageLink">Message {post.user.username}</a>
         </section>
        ))     
       const listOfPosts = allPosts.map((post, index) => (
@@ -104,7 +104,6 @@ class Board extends Component {
         <h1 className="projectBoard">Projects Posted Today</h1>
         : <h1 className="projectBoard">Project Board</h1>
         }
-          
           <div className="container">
           <div className="addPostContainer">
           <button className="viewToday" >
@@ -112,7 +111,7 @@ class Board extends Component {
             <span><FontAwesomeIcon icon={faPlus} size="1x" className="arrow" /></span>
             New Post
             </Link>
-            </button>
+          </button>
             {
               this.state.todaysPosts ?
             <button className="viewToday" onClick={()=>this.renderTodaysPosts()}>
@@ -124,26 +123,23 @@ class Board extends Component {
             }
           </div>
           </div>
-     
-            <div>
-            {
-              !this.state.todaysPosts ?
-              <div>
-              {listOfPosts}
-              </div>
-              :
-              <div>
-              {listOfTodaysPosts}
-              </div>
-            }
+          <div className="allPostsContainer">
+          {
+            !this.state.todaysPosts ?
+            <div className="allPosts">
+            {listOfPosts}
             </div>
-      
-     
-  <div className="top">
-    <span><FontAwesomeIcon icon={faArrowUp} size="1x" className="arrow" /></span>
-    <a href="#board" className="backToTop">Back To Top</a>
-    <span><FontAwesomeIcon icon={faArrowUp} size="1x" className="arrow" /></span>
-  </div>
+            :
+            <div className="todaysPosts">
+            {listOfTodaysPosts}
+            </div>
+          }
+          </div>
+        <div className="top">
+          <span><FontAwesomeIcon icon={faArrowUp} size="1x" className="arrow" /></span>
+          <a href="#board" className="backToTop">Back To Top</a>
+          <span><FontAwesomeIcon icon={faArrowUp} size="1x" className="arrow" /></span>
+        </div>
 </section>
         )
     }
