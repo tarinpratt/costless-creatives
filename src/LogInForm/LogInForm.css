@@ -11,3 +11,7 @@
     font-size: 15px;
     background-color: rgb(42, 41, 54);
 }
+
+input.Input {
+    max-width: 130px;
+}

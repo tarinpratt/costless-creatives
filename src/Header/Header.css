@@ -50,7 +50,7 @@ a.acctButtons {
 .logInForm {
     font-weight: bolder;
     font-family: 'Playfair Display', serif;
-    width: 150px;
+    max-width: 150px;
     margin-right: auto;
     margin-left: auto;
     margin-top: 40px;
