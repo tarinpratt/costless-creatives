@@ -10,7 +10,7 @@ class Landing extends Component {
       <img src={Collab} className="collabPic" alt="collaboration" />
     <section className="one">
         <h3>See who wants to create</h3>
-        <p>Costless Creatives makes it safe to network without having to address the uncomfortable subject of money. Costless Creatives allows you to post about any kind of projects you're looking to create or be a part of. Whether you're simply new to the field of entertainment and looking to network, if you're looking for people to be a part of a passison project you'd like to create, or if you're simply just looking to create and exchange content for exposure. We're just passionate artists looking to connect! </p>
+        <p>Costless Creatives makes it safe to network without having to address the uncomfortable subject of money. Costless Creatives allows you to post about any kind of projects you're looking to create or be a part of. Whether you're simply new to the field of entertainment and looking to network, if you're looking for people to be a part of a passion project you'd like to create, or if you're simply just looking to create and exchange content for exposure. We're just passionate artists looking to connect! </p>
     </section>
     <section className="two">
         <h3>See something you're interested in?</h3>
